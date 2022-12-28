@@ -49,7 +49,7 @@
       </div>
       <div class="placeholders hidden lg:flex lg:col-span-5 2xl:col-span-4 lg:mt-0">
         <VideoPlaceholder
-          class="h-full min-h-full aspect-square mx-auto"
+          class="h-auto w-auto max-w-full aspect-video"
           size="48" />
       </div>
     </div>

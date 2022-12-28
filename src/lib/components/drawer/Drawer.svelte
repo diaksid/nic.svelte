@@ -2,12 +2,8 @@
   import { afterNavigate } from '$app/navigation';
   import { sineInOut } from 'svelte/easing';
   import { XMark as IconClose } from 'svelte-heros-v2';
-  import {
-    Drawer,
-    Sidebar,
-    SidebarBrand,
-    SidebarWrapper
-  } from 'flowbite-svelte';
+  import { Drawer, Sidebar, SidebarBrand, SidebarWrapper } from 'flowbite-svelte';
+  import { PhoneArrowUpRight as IconPhone } from 'svelte-heros-v2';
   import SidebarGroup from './SidebarGroup.svelte';
   export let menu: any;
 
@@ -50,12 +46,17 @@
   <Sidebar asideClass="w-auto">
     <SidebarWrapper>
       <SidebarGroup
-        class="flex justify-center space-y-0"
+        class="flex flex-col items-center"
         on:click={close}>
         <SidebarBrand
           aClass="py-2"
           imgClass="h-24 lg:h-24"
           {site} />
+        <a
+          class="py-2 px-4 rounded-full hover:bg-gray-400/50 text-slate-300 hover:text-slate-800 tracking-wider text-xl"
+          href="tel://+74953239923">
+          +7 (495) 323-99-23
+        </a>
       </SidebarGroup>
       <SidebarGroup
         links={menu.header}

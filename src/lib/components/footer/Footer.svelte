@@ -9,7 +9,7 @@
   $: activeUrl = $page.url.pathname;
 </script>
 
-<Footer class="mt-auto text-sm">
+<Footer class="text-sm">
   <FooterCopyright
     href="/"
     by="НИЦ «Строительная экспертиза»&trade;"

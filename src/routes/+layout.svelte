@@ -60,7 +60,8 @@
 
 <RouteTransition
   referesh={data.referesh}
-  mode={1}>
+  mode={1}
+  class="grow">
   <slot />
 </RouteTransition>
 
