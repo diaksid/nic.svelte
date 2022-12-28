@@ -2,6 +2,10 @@
 @import '$lib/assets/tailwindcss';
 
 @layer base {
+  :root {
+    --navbar-height: 60px;
+  }
+
   body {
     @apply relative text-slate-800 dark:text-neutral-100
            bg-neutral-100 dark:bg-slate-800;
@@ -20,20 +24,20 @@
            after:w-[25vw] sm:after:w-[20vw] lg:after:w-[15vw] 2xl:after:w-[10vw] after:h-[5px]
            after:bg-blue-800;
   }
-}
 
-:root {
-  --navbar-height: 74px;
+  .max-h-screen--navbar {
+    max-height: calc(100vh - var(--navbar-height));
+  }
 }
 
 main,
 [role='main'] {
   @apply flex flex-col;
-         padding-top: var(--navbar-height);
+  padding-top: var(--navbar-height);
 }
 main > header,
 [role='main'] > header {
-  @apply pt-2 sm:pt-6 md:pt-10
+  @apply pt-8 sm:pt-12 md:pt-16
          mb-12 md:mb-16 xl:mb-20;
 }
 

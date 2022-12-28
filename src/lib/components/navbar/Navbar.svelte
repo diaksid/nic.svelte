@@ -38,7 +38,9 @@
     class="ml-4" />
 
   <NavUl
-    class="md:mx-auto dark:bg-gray-700"
+    class="dark:bg-gray-700"
+    divClass="w-full md:block md:w-auto
+              max-h-screen--navbar overflow-y-auto"
     {hidden}>
     {#each menu as link}
       {@const active = activeUrl === link.href || activeUrl.indexOf(`${link.href}/`) === 0}
@@ -59,7 +61,7 @@
       {:else}
         <NavLi
           on:click={close}
-          class="cursor-pointer"
+          class="cursor-pointer dark:!bg-gray-700"
           href={link.href}
           {active}>
           {#if link.href === '/'}
