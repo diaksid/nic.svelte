@@ -1,0 +1,37 @@
+@layer utilities {
+  :root {
+    --text-shadow-color: rgba(0, 0, 0, .5);
+    --text-shadow-val: 1px;
+  }
+
+  :disabled,
+  .disabled,
+  [disabled] {
+    @apply pointer-events-none touch-none select-none;
+  }
+
+  .bg-only {
+    @apply inline-block overflow-hidden text-left -indent-[9999em];
+    direction: ltr;
+  }
+  .bg-only br {
+    @apply hidden;
+  }
+
+  .clear-pseudo {
+    @apply before:content-null before:absolute before:-z-10 before:top-0 before:right-0 before:bottom-0 before:left-0 before:opacity-0
+           after:content-null after:table after:clear-both;
+  }
+
+  .text-shadow {
+    text-shadow: var(--text-shadow-val) var(--text-shadow-val) calc(var(--text-shadow-val) * 1.5)
+      var(--text-shadow-color);
+  }
+
+  .readable {
+    @apply text-justify text-base leading-relaxed;
+  }
+  .readable ul {
+    @apply list-inside list-disc;
+  }
+}

@@ -1,0 +1,9 @@
+@layer components {
+  .wrapper {
+    @apply w-full px-2 sm:px-4;
+  }
+
+  .content {
+    @apply w-full mx-auto  px-4 xs:px-8 lg:max-w-5xl xl:px-0;
+  }
+}

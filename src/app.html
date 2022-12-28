@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8" />
+  <meta
+    name="viewport"
+    content="width=device-width" />
+  <meta
+    name="robots"
+    content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1" />
+  %sveltekit.head%
+  <link
+    rel="manifest"
+    href="/manifest.webmanifest" />
+  <meta
+    name="msapplication-config"
+    content="/browserconfig.xml" />
+  <link
+    rel="yandex-tableau-widget"
+    href="/tableau.json" />
+</head>
+
+<body
+  itemscope
+  itemtype="https://schema.org/%schema.page%">
+  <div class="flex flex-col min-h-screen">
+    %sveltekit.body%
+  </div>
+</body>
+
+</html>
