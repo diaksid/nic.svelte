@@ -3,8 +3,8 @@
   import Grid from './Grid.svelte';
   import data from '$lib/assets/images/content/permissions';
 
-  const title = 'СКМ • Допуски';
-  const description = 'Допуски предпрятия СКМ';
+  const title = 'НИЦ СЭ • Допуски';
+  const description = 'Допуски предпрятия АО НИЦ «Строительная экспертиза»';
 </script>
 
 <YandexMetrikaHit

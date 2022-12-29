@@ -29,7 +29,7 @@
   <meta
     name="robots"
     content="noindex, follow" />
-  <title>СКМ • Администрирование</title>
+  <title>НИЦ СЭ • Администрирование</title>
 </svelte:head>
 
 <main>

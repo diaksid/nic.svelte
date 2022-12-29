@@ -4,8 +4,8 @@
   //import { Form, Serp } from '$lib/seo/yandex/search';
 
   const robots = 'noindex, follow';
-  const title = 'СКМ • Поиск';
-  const description = 'Поиск на сайте предпрятия СКМ';
+  const title = 'НИЦ СЭ • Поиск';
+  const description = 'Поиск на сайте предпрятия АО НИЦ «Строительная экспертиза»';
   const canonical = '';
 
   onMount(() => document?.lazyloadInstance?.update());

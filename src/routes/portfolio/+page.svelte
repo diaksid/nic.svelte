@@ -8,8 +8,8 @@
     thumbnails: await squares()
   });
 
-  const title = 'СКМ • Проекты';
-  const description = 'Проекты предпрятия СКМ';
+  const title = 'НИЦ СЭ • Проекты';
+  const description = 'Проекты предпрятия АО НИЦ «Строительная экспертиза»';
 </script>
 
 <YandexMetrikaHit
