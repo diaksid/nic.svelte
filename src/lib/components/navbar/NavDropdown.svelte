@@ -43,11 +43,12 @@
     dispatch('close');
   };
 
-  let liClass = `flex flex-col items-center py-2 pr-4 pl-3 md:p-0
+  const liClass = `flex flex-col items-center py-2 pr-4 pl-3 md:p-0
      text-gray-700 dark:text-gray-400 md:dark:hover:text-white dark:hover:text-white
      border-b border-gray-100 md:border-0 dark:border-gray-700
      hover:bg-gray-50 md:hover:bg-transparent dark:hover:bg-gray-700 md:dark:hover:bg-transparent
      md:hover:text-blue-700`;
+  const activeClass = 'text-blue-700 dark:text-gray-200';
 
   $: activeUrl = $page.url.pathname;
 </script>
@@ -83,8 +84,8 @@
           aria-labelledby="dropdownLargeButton">
           {#each link.links as item}
             {@const href = link.href + item.href}
-            {#if activeUrl === href || activeUrl.indexOf(`${href}/`) === 0}
-              <li class="text-blue-700 dark:text-gray-200">
+            {#if activeUrl === href}
+              <li class={activeClass}>
                 <span
                   on:blur
                   on:focus
@@ -95,10 +96,8 @@
                 </span>
               </li>
             {:else}
-              <li>
+              <li class={activeUrl.indexOf(`${href}/`) === 0 ? activeClass : undefined}>
                 <a
-                  {href}
-                  {rel}
                   on:blur
                   on:change
                   on:click={handleClick}
@@ -109,7 +108,10 @@
                   on:mouseenter
                   on:mouseleave
                   on:mouseover
-                  class={dropdownLinkClassWithChild}>
+                  class={dropdownLinkClassWithChild}
+                  {rel}
+                  {href}
+                  target={item.target}>
                   {item.label}
                 </a>
               </li>

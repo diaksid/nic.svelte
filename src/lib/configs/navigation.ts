@@ -72,17 +72,17 @@ export const navbar = [
     links: draver.activity
   },
   {
-    href: '/docs/regulation.pdf',
-    target: '_blank',
-    label: 'Регламент'
+    href: '/portfolio',
+    label: 'Проекты'
   },
   {
     href: '/permissions',
     label: 'Допуски'
   },
   {
-    href: '/portfolio',
-    label: 'Проекты'
+    href: '/docs/regulation.pdf',
+    target: '_blank',
+    label: 'Регламент'
   },
   {
     href: '/contacts',
@@ -92,13 +92,13 @@ export const navbar = [
 
 export const footer = [
   {
+    href: '/permissions',
+    label: 'Допуски'
+  },
+  {
     href: '/docs/regulation.pdf',
     target: '_blank',
     label: 'Регламент'
-  },
-  {
-    href: '/permissions',
-    label: 'Допуски'
   },
   {
     href: '/contacts',

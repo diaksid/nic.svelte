@@ -60,6 +60,7 @@
           on:click={close}
           class="cursor-pointer dark:!bg-gray-700{home ? ' hidden md:block' : ''}"
           href={link.href}
+          target={link.target}
           {active}>
           {#if home}
             <IconHome
