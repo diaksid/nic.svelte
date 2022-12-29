@@ -26,6 +26,7 @@
     "test:unit": "vitest"
   },
   "devDependencies": {
+    "@iconify/svelte": "*",
     "@playwright/test": "*",
     "@sveltejs/adapter-node": "*",
     "@sveltejs/adapter-static": "*",
@@ -43,6 +44,7 @@
     "flowbite": "*",
     "flowbite-svelte": "*",
     "html-minifier-terser": "*",
+    "iconify-icon": "*",
     "postcss": "*",
     "postcss-import": "*",
     "postcss-load-config": "*",

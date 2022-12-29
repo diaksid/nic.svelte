@@ -19,7 +19,8 @@
 <Navbar
   let:hidden
   let:toggle
-  class="fixed z-40 top-0 left-0 shadow-md dark:bg-primary-700"
+  class="fixed z-40 top-0 left-0 shadow-md dark:bg-primary-700
+         !px-0 overflow-offset"
   color="form">
   {@const close = () => hidden || toggle()}
 

@@ -16,6 +16,10 @@ module.exports = {
     extend: {
       colors: {
         primary: colors.slate
+      },
+      backgroundImage: {
+        loading: 'url($lib/assets/icons/loading/0.svg)',
+        'loading-data': 'url($lib/assets/icons/loading/data.svg)'
       }
     }
   },

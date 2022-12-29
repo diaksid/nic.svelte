@@ -1,14 +1,15 @@
 <script lang="ts">
-  import {
-    ImagePlaceholder,
-    Skeleton,
-    TestimonialPlaceholder,
-    TextPlaceholder
-  } from 'flowbite-svelte';
   import { YandexMetrikaHit } from '$lib/seo/yandex';
+  import Grid from './Grid.svelte';
+  import { sources, squares } from '$lib/assets/images/content/portfolio';
 
-  const title = 'НИЦ СЭ • Портфолио';
-  const description = 'Портфолио АО НИЦ «Строительная экспертиза»';
+  const data = async () => ({
+    images: await sources(),
+    thumbnails: await squares()
+  });
+
+  const title = 'СКМ • Проекты';
+  const description = 'Проекты предпрятия СКМ';
 </script>
 
 <YandexMetrikaHit
@@ -20,17 +21,5 @@
     <h1 class="title">Недавние проекты</h1>
   </header>
 
-  <div class="placeholders content">
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 mb-16 items-center">
-      <ImagePlaceholder />
-      <ImagePlaceholder class="-scale-x-100" />
-      <ImagePlaceholder />
-      <ImagePlaceholder class="-scale-x-100" />
-      <ImagePlaceholder />
-      <ImagePlaceholder class="-scale-x-100" />
-      <Skeleton class="lg:-scale-x-100 lg:mr-auto" />
-      <TextPlaceholder />
-    </div>
-    <TestimonialPlaceholder />
-  </div>
+  <Grid {data} />
 </main>

@@ -25,6 +25,11 @@
            after:bg-blue-800;
   }
 
+  body.overflow-hidden,
+  body.overflow-hidden .overflow-offset {
+    padding-right: var(--scrollbar-size) !important;
+  }
+
   .max-h-screen--navbar {
     max-height: calc(100vh - var(--navbar-height));
   }

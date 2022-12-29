@@ -33,21 +33,30 @@ module.exports = {
       backgroundPosition: {
         'center-top': 'center top'
       },
+      spacing: {
+        '1/7': '14.285714%',
+        '1/8': '12.5%',
+        '1/9': '11.111111%',
+        '1/10': '10%',
+        '1/11': '9.090909%',
+        contain: 'contain',
+        inherit: 'inherit'
+      },
       maxWidth: {
-        inherit: 'inherit',
-        none: 'none'
+        auto: 'auto',
+        inherit: 'inherit'
       },
       minWidth: {
-        inherit: 'inherit',
-        none: 'none'
+        auto: 'auto',
+        inherit: 'inherit'
       },
       maxHeight: {
-        inherit: 'inherit',
-        none: 'none'
+        auto: 'auto',
+        inherit: 'inherit'
       },
       minHeight: {
-        inherit: 'inherit',
-        none: 'none'
+        auto: 'auto',
+        inherit: 'inherit'
       },
       aspectRatio: {
         '3/4': '3 / 4',

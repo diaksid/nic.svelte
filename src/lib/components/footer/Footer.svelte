@@ -11,7 +11,7 @@
 
 <Footer class="text-sm">
   <FooterCopyright
-    href="/"
+    href="/admin"
     by="НИЦ «Строительная экспертиза»&trade;"
     year={2022} />
   <FooterLinkGroup
