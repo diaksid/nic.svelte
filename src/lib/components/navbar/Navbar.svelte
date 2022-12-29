@@ -1,7 +1,8 @@
 <script lang="ts">
   import { page } from '$app/stores';
-  import { Navbar, NavBrand, NavLi, NavUl, NavHamburger, Chevron, DarkMode } from 'flowbite-svelte';
+  import { Navbar, NavLi, NavUl, NavHamburger, Chevron, DarkMode } from 'flowbite-svelte';
   import { Home as IconHome } from 'svelte-heros-v2';
+  import NavBrand from './NavBrand.svelte';
   import Dropdown from './NavDropdown.svelte';
 
   export let menu: NavLink[];
@@ -21,7 +22,10 @@
   class="fixed z-40 top-0 left-0 shadow-md dark:bg-primary-700"
   color="form">
   {@const close = () => hidden || toggle()}
-  <NavBrand href="/">
+
+  <NavBrand
+    on:click={close}
+    href="/">
     <img
       src="/images/logo.small.webp"
       class="border-transparent ml-1.5 mr-3 h-6 sm:h-9"
@@ -44,14 +48,6 @@
     {hidden}>
     {#each menu as link}
       {@const active = activeUrl === link.href || activeUrl.indexOf(`${link.href}/`) === 0}
-      <!--NavLi
-        class={`cursor-pointer${active && ' !text-white' || ''}`}>
-        {#if link.links}
-          <Chevron  aligned>{@html link.label}</Chevron>
-          {:else}
-        {@html link.label}
-        {/if}
-      </NavLi-->
       {#if link.links}
         <Dropdown
           on:close={close}
@@ -59,12 +55,13 @@
           {active}
           offset={32} />
       {:else}
+        {@const home = link.href === '/'}
         <NavLi
           on:click={close}
-          class="cursor-pointer dark:!bg-gray-700"
+          class="cursor-pointer dark:!bg-gray-700{home ? ' hidden md:block' : ''}"
           href={link.href}
           {active}>
-          {#if link.href === '/'}
+          {#if home}
             <IconHome
               class="-mt-0.5"
               size="24"

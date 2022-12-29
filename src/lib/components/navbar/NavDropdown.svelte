@@ -31,7 +31,7 @@
 
   const dispatch = createEventDispatcher();
 
-  let hidden = true;
+  let hidden = !active;
   let block = false;
 
   const handleDropdown = () => {
@@ -83,25 +83,37 @@
           aria-labelledby="dropdownLargeButton">
           {#each link.links as item}
             {@const href = link.href + item.href}
-            {@const active = activeUrl === href || activeUrl.indexOf(`${href}/`) === 0 || undefined}
-            <li class={active && 'text-blue-700 dark:text-gray-200'}>
-              <a
-                {href}
-                {rel}
-                on:blur
-                on:change
-                on:click={handleClick}
-                on:focus
-                on:keydown
-                on:keypress
-                on:keyup
-                on:mouseenter
-                on:mouseleave
-                on:mouseover
-                class={dropdownLinkClassWithChild}>
-                {item.label}
-              </a>
-            </li>
+            {#if activeUrl === href || activeUrl.indexOf(`${href}/`) === 0}
+              <li class="text-blue-700 dark:text-gray-200">
+                <span
+                  on:blur
+                  on:focus
+                  on:mouseleave
+                  on:mouseover
+                  class={dropdownLinkClassWithChild}>
+                  {@html item.label}
+                </span>
+              </li>
+            {:else}
+              <li>
+                <a
+                  {href}
+                  {rel}
+                  on:blur
+                  on:change
+                  on:click={handleClick}
+                  on:focus
+                  on:keydown
+                  on:keypress
+                  on:keyup
+                  on:mouseenter
+                  on:mouseleave
+                  on:mouseover
+                  class={dropdownLinkClassWithChild}>
+                  {item.label}
+                </a>
+              </li>
+            {/if}
           {/each}
         </ul>
       </slot>

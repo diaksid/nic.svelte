@@ -1,9 +1,8 @@
 export const draver = {
   header: [
     {
-      href: '/docs/regulation.pdf',
-      target: '_blank',
-      label: 'Регламент'
+      href: '/about',
+      label: 'О предприятии'
     },
     {
       href: '/partners',
@@ -52,10 +51,6 @@ export const draver = {
   ],
   footer: [
     {
-      href: '/about',
-      label: 'О предприятии'
-    },
-    {
       href: 'javascript:void(0)',
       label: 'Отзывы'
     },
@@ -67,22 +62,27 @@ export const draver = {
 };
 
 export const navbar = [
-  {
+  /*{
     href: '/',
     label: 'Главная'
-  },
+  },*/
   {
     href: '/activity',
     label: 'Деятельность',
     links: draver.activity
   },
   {
-    href: '/portfolio',
-    label: 'Портфолио'
+    href: '/docs/regulation.pdf',
+    target: '_blank',
+    label: 'Регламент'
   },
   {
     href: '/permissions',
     label: 'Допуски'
+  },
+  {
+    href: '/portfolio',
+    label: 'Проекты'
   },
   {
     href: '/contacts',
