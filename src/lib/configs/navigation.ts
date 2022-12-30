@@ -80,8 +80,7 @@ export const navbar = [
     label: 'Допуски'
   },
   {
-    href: '/docs/regulation.pdf',
-    target: '_blank',
+    href: '/regulation',
     label: 'Регламент'
   },
   {
@@ -96,8 +95,7 @@ export const footer = [
     label: 'Допуски'
   },
   {
-    href: '/docs/regulation.pdf',
-    target: '_blank',
+    href: '/regulation',
     label: 'Регламент'
   },
   {

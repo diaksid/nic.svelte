@@ -30,6 +30,9 @@
     padding-right: var(--scrollbar-size) !important;
   }
 
+  .min-h-screen--navbar {
+    min-height: calc(100vh - var(--navbar-height));
+  }
   .max-h-screen--navbar {
     max-height: calc(100vh - var(--navbar-height));
   }

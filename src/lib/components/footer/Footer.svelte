@@ -11,6 +11,7 @@
 
 <Footer class="text-sm">
   <FooterCopyright
+    rel="nofollow"
     href="/admin"
     by="НИЦ «Строительная экспертиза»&trade;"
     year={2022} />
