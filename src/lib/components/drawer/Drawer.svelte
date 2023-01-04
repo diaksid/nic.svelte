@@ -3,7 +3,6 @@
   import { sineInOut } from 'svelte/easing';
   import { XMark as IconClose } from 'svelte-heros-v2';
   import { Drawer, Sidebar, SidebarBrand, SidebarWrapper } from 'flowbite-svelte';
-  import { PhoneArrowUpRight as IconPhone } from 'svelte-heros-v2';
   import SidebarGroup from './SidebarGroup.svelte';
   export let menu: any;
 

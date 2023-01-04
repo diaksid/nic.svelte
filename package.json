@@ -1,6 +1,6 @@
 {
   "name": "nic.svelte",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "NIC",
   "repository": {
     "type": "git",
@@ -18,8 +18,9 @@
     "dev": "vite dev --port=3000",
     "lint": "prettier --plugin-search-dir . --check . && eslint .",
     "format": "prettier --plugin-search-dir . --write .",
-    "generate:images": "node run/generate.image-data.js",
-    "generate:sitemap": "node run/generate.sitemap.js",
+    "create:sitemap": "node run/create.sitemap.js",
+    "create:iconset": "node run/create.iconset.js",
+    "create:images": "node run/create.images.js",
     "build": "vite build",
     "preview": "vite preview --port=3000",
     "test": "playwright test",
@@ -35,6 +36,7 @@
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
     "autoprefixer": "*",
+    "classnames": "*",
     "cssnano": "*",
     "cssnano-preset-advanced": "*",
     "dotenv": "*",

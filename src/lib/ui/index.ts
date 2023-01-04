@@ -1,3 +1,5 @@
+export { default as Link } from './link/Link.svelte';
+
 export { default as RouteTransition } from './route-transition/RouteTransition.svelte';
 export { default as ScreenBlock } from './screen-block/ScreenBlock.svelte';
 

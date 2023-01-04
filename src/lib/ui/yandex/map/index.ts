@@ -1,2 +1,2 @@
-import Map from './YandexMap.svelte';
-export default Map;
+import YandexMap from './YandexMap.svelte';
+export default YandexMap;

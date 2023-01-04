@@ -22,6 +22,13 @@ module.exports = {
         xs: '480px',
         '3xl': '1600px'
       },
+      fontSize: {
+        '3xs': '0.5rem',
+        '2xs': '0.625rem',
+        '2.5xl': '1.6875rem',
+        '3.5xl': '2rem',
+        '4.5xl': '2.5rem'
+      },
       backgroundSize: {
         '1/20': '5%',
         '1/10': '10%',

@@ -10,24 +10,21 @@
   let node: HTMLElement;
 
   const close = () => {
-    setTimeout(() => {
-      node.style.transitionDuration = `${duration}ms`;
-      node.style.pointerEvents = node.style.touchAction = 'none';
-      node.style.opacity = '0';
-    }, 50);
-    setTimeout(() => node.remove(), duration + 50);
+    node.style.transitionDuration = `${duration}ms`;
+    node.style.pointerEvents = node.style.touchAction = 'none';
+    node.style.opacity = '0';
+    setTimeout(() => node.remove(), duration);
   };
 
-  onMount(close);
+  onMount(() => setTimeout(close, 100));
 </script>
 
 <div
   bind:this={node}
   class="fixed z-50 top-0 left-0 flex flex-col justify-center items-center
          w-screen h-screen
-         bg-no-repeat bg-center
+         bg-no-repeat bg-center bg-1/4 sm:bg-1/10 lg:bg-1/20
          transition-opacity ease-out
          {className}"
-  style:background-size="10vmax"
   style:background-image={`url(${icon})`}
   hidden />

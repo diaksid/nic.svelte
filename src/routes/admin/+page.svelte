@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { Icon } from '$lib/ui/iconfy';
+  import Icon from '$lib/ui/iconfy';
   import bundles from '$lib/ui/iconfy/bundles.json';
   import custom from '$lib/ui/iconfy/custom';
   import Bundle from './Bundle.svelte';

@@ -56,8 +56,6 @@
     content={shortName} />
 </svelte:head>
 
-<Navbar menu={navigation.navbar} />
-
 <RouteTransition
   referesh={data.referesh}
   mode={1}
@@ -66,6 +64,8 @@
 </RouteTransition>
 
 <Footer menu={navigation.footer} />
+
+<Navbar menu={navigation.navbar} />
 
 <Drawer menu={navigation.draver} />
 

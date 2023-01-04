@@ -9,7 +9,7 @@ module.exports = plugin(function ({ addUtilities }) {
       '--text-shadow-color': colors.black,
       '--text-shadow-val': '1px'
     },
-    [[':disabled', '.disabled', '[disabled]']]: {
+    [['.disabled', ':disabled', '[disabled]']]: {
       'pointer-events': 'none',
       'touch-action': 'none',
       'user-select': 'none'
