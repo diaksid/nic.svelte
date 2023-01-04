@@ -51,11 +51,11 @@ export const draver = {
   ],
   footer: [
     {
-      href: 'javascript:void(0)',
+      href: '/feedback',
       label: 'Отзывы'
     },
     {
-      href: 'javascript:void(0)',
+      href: '/privacy',
       label: 'Политика конфиденциальности'
     }
   ]
