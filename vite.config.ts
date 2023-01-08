@@ -15,7 +15,7 @@ process.env.APP_VERSION ??= pkg.version;
 */
 
 const config: UserConfig = {
-  //logLevel: 'error',
+  logLevel: 'error',
   plugins: [
     sveltekit(),
     imagetools({
