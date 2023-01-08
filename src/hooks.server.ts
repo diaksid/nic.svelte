@@ -1,9 +1,9 @@
-import type { Handle } from '@sveltejs/kit';
-
+import { promises as fs } from 'fs';
+import { resolve } from 'path';
 import * as cookie from 'cookie';
-
-import { building } from '$app/environment';
 import { minify } from 'html-minifier-terser';
+import { building } from '$app/environment';
+import type { Handle } from '@sveltejs/kit';
 
 const minification_options = {
   collapseBooleanAttributes: true,
@@ -13,8 +13,9 @@ const minification_options = {
   minifyCSS: true,
   minifyJS: true,
   minifyURLs: true,
+  //preserveLineBreaks: true,
   removeAttributeQuotes: true,
-  removeComments: true,
+  //removeComments: true,
   removeOptionalTags: true,
   removeRedundantAttributes: true,
   removeScriptTypeAttributes: true,
@@ -22,6 +23,8 @@ const minification_options = {
   removeTagWhitespace: true,
   useShortDoctype: true
 };
+
+const pkg = JSON.parse(await fs.readFile(resolve(process.cwd(), 'package.json'), 'utf8'));
 
 const microdata = (pathname: string) => {
   const data: any = {};
@@ -59,7 +62,9 @@ export const handle: Handle = async ({ event, resolve }) => {
 
   if (response.headers.get('content-type') === 'text/html') {
     const schema = microdata(event.url.pathname);
-    let html = (await response.text()).replace('%schema.page%', schema.page);
+    let html = (await response.text())
+      .replaceAll('%app.version%', pkg.version)
+      .replace('%schema.page%', schema.page);
     if (building) html = await minify(html, minification_options);
     return new Response(html, {
       status: response.status,

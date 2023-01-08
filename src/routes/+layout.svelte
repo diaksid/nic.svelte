@@ -8,16 +8,14 @@
   import '../app.css';
 
   import navigation from '$lib/configs/navigation';
-  import website from '$lib/configs/website';
+  import app from '$lib/configs/app';
   import type { SvelteComponent } from 'svelte';
-  const { shortName, themeColor, tileColor } = website;
+  const { shortName, themeColor, tileColor } = app;
 
   import type { PageData } from './$types';
   export let data: PageData;
 
-  const build = import.meta.env.VITE_APP_BUILD;
-
-  if (browser) {
+  if (!import.meta.env.SSR) {
     if (!('color-theme' in localStorage)) {
       localStorage.setItem('color-theme', 'dark');
       document.documentElement.classList.add('dark');
@@ -31,17 +29,6 @@
 </script>
 
 <svelte:head>
-  <link
-    rel="alternate icon"
-    href="/favicon.ico?v={build}"
-    sizes="any" />
-  <link
-    rel="apple-touch-icon"
-    href="/favicon/maskable/192.png?v={build}" />
-  <link
-    rel="icon"
-    href="/favicon/192.png?v={build}"
-    type="image/svg+xml" />
   <meta
     name="theme-color"
     content={themeColor} />
