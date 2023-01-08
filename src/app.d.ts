@@ -1,20 +1,19 @@
 // See https://kit.svelte.dev/docs/types#app
 declare namespace App {
   // interface Error {}
-
   interface Locals {
     userid: string;
   }
-
   // interface PageData {}
   // interface Platform {}
 }
 
 interface NavLink {
   label: string;
+  title?: string;
   href: string;
-  target?: string;
   handle?: (event?: Event) => void;
+  target?: string;
   links?: NavLink[];
 }
 

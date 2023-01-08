@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { browser } from '$app/environment';
   import LazyLoad from 'vanilla-lazyload';
   import { Drawer, Footer, Navbar } from '$lib/components';
   import { RouteTransition, ScreenBlock } from '$lib/ui';
@@ -7,13 +6,12 @@
 
   import '../app.css';
 
-  import navigation from '$lib/configs/navigation';
-  import app from '$lib/configs/app';
-  import type { SvelteComponent } from 'svelte';
-  const { shortName, themeColor, tileColor } = app;
-
   import type { PageData } from './$types';
   export let data: PageData;
+
+  import navigation from '$lib/configs/navigation';
+  import app from '$lib/configs/app';
+  const { shortName, themeColor, tileColor } = app;
 
   if (!import.meta.env.SSR) {
     if (!('color-theme' in localStorage)) {

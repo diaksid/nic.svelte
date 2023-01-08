@@ -26,7 +26,7 @@ const config: UserConfig = {
         meta: 'width;height;quality;src'
       })
     })
-//  minifyPlugin(),
+    //minifyPlugin(),
 ],
   test: {
     include: ['src/**/*.{test,spec}.{js,ts}']

@@ -61,7 +61,7 @@
     "typescript": "*",
     "vanilla-lazyload": "*",
     "vite": "*",
-    "vite-imagetools": "4.0.11",
+    "vite-imagetools": "*",
     "vitest": "*"
   },
   "type": "module"
