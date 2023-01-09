@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { YandexMetrikaHit } from '$lib/seo/yandex/metrika';
+  import { YandexMetrikaHit } from 'daks-svelte';
   //import { Form, Serp } from '$lib/seo/yandex/search';
 
   const robots = 'noindex, follow';

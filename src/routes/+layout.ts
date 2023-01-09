@@ -3,4 +3,6 @@
 export const prerender = true;
 
 import type { Page } from '@sveltejs/kit';
-export const load = (page: Page) => ({ referesh: page.url.pathname });
+export const load = (page: Page) => ({
+  referesh: page.url.pathname
+});

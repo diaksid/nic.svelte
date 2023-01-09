@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import { YandexMetrikaHit } from '$lib/seo/yandex';
+  import { YandexMetrikaHit } from 'daks-svelte';
 
   const title = 'НИЦ СЭ • Регламент';
   const description =

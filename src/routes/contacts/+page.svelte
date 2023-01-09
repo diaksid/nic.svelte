@@ -1,12 +1,41 @@
 <script lang="ts">
+  import { YandexMetrikaHit, YandexMap } from 'daks-svelte';
   //import { Icon } from '$ui/iconfy';
   import {
     MapPin as IconMap,
     PhoneArrowUpRight as IconPhone,
     Envelope as IconMail
   } from 'svelte-heros-v2';
-  import Ymap from './Ymap.svelte';
-  import { YandexMetrikaHit } from '$lib/seo/yandex/metrika';
+
+  const data = {
+    locations: [
+      {
+        geometry: [55.771174, 37.60589],
+        properties: {
+          iconContent: '<strong class="tracking-wider">НИЦ «Строительная экспертиза»</strong>',
+          balloonContentHeader: 'НИЦ «Строительная экспертиза»',
+          balloonContentBody:
+            '<img class=mx-auto src=/images/ymap.webp width=192 height=192 />',
+          balloonContentFooter:
+            '<div class=text-center>время работы: 9 <sup>00</sup> -- 19 <sup>00</sup></div>'
+        },
+        options: {
+          preset: 'islands#nightStretchyIcon'
+        }
+      }
+    ],
+    state: {
+      center: [55.771174, 37.60589],
+      zoom: 17,
+      behaviors: [
+        'drag',
+        'dblClickZoom',
+        'rightMouseButtonMagnifier',
+        'multiTouch'
+      ],
+      controls: ['zoomControl', 'fullscreenControl']
+    }
+  };
 
   const title = 'НИЦ СЭ • Контакты ';
   const description = 'Контакты АО НИЦ «Строительная экспертиза»';
@@ -70,5 +99,5 @@
     </a>
   </div>
 
-  <Ymap />
+  <YandexMap {data} />
 </main>

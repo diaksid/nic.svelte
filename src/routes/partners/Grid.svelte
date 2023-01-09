@@ -1,6 +1,6 @@
 <script lang="ts">
   import { onMount } from 'svelte';
-  import placeholder from '$lib/assets/icons/placeholder';
+  import placeholder from 'daks-svelte/assets/icons/placeholder';
 
   export let partners: {
     image: any;

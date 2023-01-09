@@ -1,5 +1,5 @@
-@import '$lib/assets/fonts/open-sans/variable';
-@import '$lib/assets/tailwindcss';
+@import 'daks-svelte/fonts/open-sans/variable';
+@import 'daks-svelte/tailwindcss';
 
 @layer base {
   :root {

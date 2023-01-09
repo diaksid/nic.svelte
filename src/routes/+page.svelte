@@ -8,7 +8,7 @@
     VideoPlaceholder
   } from 'flowbite-svelte';
   import { PhoneArrowUpRight as IconPhone, Envelope as IconMail } from 'svelte-heros-v2';
-  import { YandexMetrikaHit } from '$lib/seo/yandex';
+  import { YandexMetrikaHit } from 'daks-svelte';
 
   const title = 'НИЦ СЭ • Строительная экспертиза';
   const description = 'АО НИЦ «Строительная экспертиза», Москва';

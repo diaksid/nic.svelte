@@ -5,22 +5,27 @@
   export let aClass = 'hover:underline';
   export let href = '';
   export let target: undefined | string = undefined;
+  export let role: undefined | string = undefined;
+  export let itemprop: undefined | string = undefined;
   export let active: boolean;
 </script>
 
 <li class={classNames(liClass, $$props.class)}>
   {#if active}
     <span
-      {...$$restProps}
-      class="text-gray-300">
+      class="text-gray-300"
+      role="none"
+      {...$$restProps}>
       <slot />
     </span>
   {:else}
     <a
-      {...$$restProps}
       {href}
       class={aClass}
-      {target}>
+      {target}
+      {role}
+      {itemprop}
+      {...$$restProps}>
       <slot />
     </a>
   {/if}

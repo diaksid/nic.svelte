@@ -6,7 +6,9 @@
 
 <svelte:head>
   <title>{$page.status}</title>
-  <meta name="description" content="Ошибка в работе приложения" />
+  <meta
+    name="description"
+    content="Ошибка в работе приложения" />
 </svelte:head>
 
 <main class="content flex flex-col items-center">
@@ -16,7 +18,8 @@
              font-mono font-bold text-[35vh] text-slate-500 dark:text-slate-500">
       {$page.status}
     </h1>
-    <p class="w-full px-12 py-8
+    <p
+      class="w-full px-12 py-8
               text-xl bg-rose-600 text-gray-200 rounded">
       {#if $page.error?.message}
         {$page.error.message}
@@ -35,8 +38,6 @@
     <h1 class="w-full mt-auto text-4xl leading-loose">
       Похоже отсутствует подключение к интернету
     </h1>
-    <p class="w-full mb-auto">
-      Перегрузите страницу при восстановлении соединения.
-    </p>
+    <p class="w-full mb-auto">Перегрузите страницу при восстановлении соединения.</p>
   {/if}
 </main>

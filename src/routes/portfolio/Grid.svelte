@@ -1,6 +1,6 @@
 <script lang="ts">
-  import { Lightboxes, Modal, Thumbnail } from '$lib/ui/lightbox';
-  import placeholder from '$lib/assets/icons/placeholder';
+  import { Lightboxes, LightboxModal, LightboxThumbnail } from 'daks-svelte';
+  import placeholder from 'daks-svelte/assets/icons/placeholder';
 
   export let data;
 
@@ -23,7 +23,7 @@
       {loader}>
       <svelte:fragment slot="thumbnail">
         {#each thumbnails as thumbnail, idx}
-          <Thumbnail>
+          <LightboxThumbnail>
             <img
               class="lazy bg-no-repeat bg-center bg-1/5 bg-loading bg-gray-300 grayscale rounded-md shadow-lg shadow-slate-700
                      hover:grayscale-0 hover:shadow-slate-900
@@ -36,11 +36,11 @@
               loading="lazy" />
             <link rel="image" href={images[idx].src} />
             <link rel="thumbnailUrl" href={thumbnail.src} />
-          </Thumbnail>
+          </LightboxThumbnail>
         {/each}
       </svelte:fragment>
       {#each images as image, idx}
-        <Modal>
+        <LightboxModal>
           <img
             class="bg-no-repeat bg-center bg-1/10 bg-loading"
             src={image.src}
@@ -48,7 +48,7 @@
             height={image.height}
             alt="skm: image {idx}"
             loading="lazy" />
-        </Modal>
+        </LightboxModal>
       {/each}
     </Lightboxes>
   {:catch error}

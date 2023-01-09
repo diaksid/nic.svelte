@@ -32,7 +32,7 @@ export const route = (() => {
 
   return {
     subscribe,
-    change: () => update(value => value < 2 ? ++value : 0)
+    change: () => update((value) => (value < 2 ? ++value : 0))
   };
 })();
 

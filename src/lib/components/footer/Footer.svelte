@@ -11,8 +11,7 @@
 
 <Footer class="text-sm">
   <FooterCopyright
-    rel="nofollow"
-    href="/admin"
+    href="/"
     by="НИЦ «Строительная экспертиза»&trade;"
     year={2022} />
   <FooterLinkGroup
@@ -21,8 +20,10 @@
       <FooterLink
         href={link.href}
         target={link.target}
-        active={activeUrl === link.href || activeUrl.indexOf(`${link.href}/`) === 0}
-        >{link.label}</FooterLink>
+        itemprop="relatedLink"
+        active={activeUrl === link.href || activeUrl.indexOf(`${link.href}/`) === 0}>
+        {link.label}
+      </FooterLink>
     {/each}
   </FooterLinkGroup>
 </Footer>

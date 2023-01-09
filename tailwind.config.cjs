@@ -4,12 +4,13 @@ const colors = require('tailwindcss/colors');
 module.exports = {
   content: [
     './src/**/*.{svelte,html,ts,js}',
+    './node_modules/daks-svelte/**/*.{svelte,html,ts,js}',
     './node_modules/flowbite-svelte/**/*.{svelte,html,ts,js}'
   ],
 
   presets: [
-    require('./src/lib/assets/tailwindcss/presets/common.cjs'),
-    require('./src/lib/assets/tailwindcss/presets/font-family.cjs')
+    require('daks-svelte/assets/tailwindcss/presets/common.cjs'),
+    require('daks-svelte/assets/tailwindcss/presets/font-family.cjs')
   ],
 
   theme: {
@@ -18,8 +19,8 @@ module.exports = {
         primary: colors.slate
       },
       backgroundImage: {
-        loading: 'url($lib/assets/icons/loading/0.svg)',
-        'loading-data': 'url($lib/assets/icons/loading/data.svg)'
+        loading: 'url(daks-svelte/assets/icons/loading/0.svg)',
+        'loading-data': 'url(daks-svelte/assets/icons/loading/data.svg)'
       }
     }
   },

@@ -1,17 +1,15 @@
 <script lang="ts">
   import LazyLoad from 'vanilla-lazyload';
+  import { RouteTransition, ScreenBlock, YandexMetrikaInit } from 'daks-svelte';
   import { Drawer, Footer, Navbar } from '$lib/components';
-  import { RouteTransition, ScreenBlock } from '$lib/ui';
-  import { YandexMetrikaInit } from '$lib/seo/yandex/metrika';
 
   import '../app.css';
 
   import type { PageData } from './$types';
   export let data: PageData;
 
-  import navigation from '$lib/configs/navigation';
   import app from '$lib/configs/app';
-  const { shortName, themeColor, tileColor } = app;
+  import navigation from '$lib/configs/navigation';
 
   if (!import.meta.env.SSR) {
     if (!('color-theme' in localStorage)) {
@@ -29,16 +27,16 @@
 <svelte:head>
   <meta
     name="theme-color"
-    content={themeColor} />
+    content={app.themeColor} />
   <meta
     name="msapplication-TileColor"
-    content={tileColor} />
+    content={app.tileColor} />
   <meta
     name="application-name"
-    content={shortName} />
+    content={app.shortName} />
   <meta
     name="apple-mobile-web-app-title"
-    content={shortName} />
+    content={app.shortName} />
 </svelte:head>
 
 <RouteTransition
@@ -54,6 +52,6 @@
 
 <Drawer menu={navigation.draver} />
 
-<YandexMetrikaInit />
-
 <ScreenBlock class="bg-neutral-200 dark:bg-slate-800" />
+
+<YandexMetrikaInit />

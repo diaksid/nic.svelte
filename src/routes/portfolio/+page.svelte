@@ -1,5 +1,5 @@
 <script lang="ts">
-  import { YandexMetrikaHit } from '$lib/seo/yandex';
+  import { YandexMetrikaHit } from 'daks-svelte';
   import Grid from './Grid.svelte';
   import { sources, squares } from '$lib/assets/images/content/portfolio';
 

@@ -1,6 +1,6 @@
 <script lang="ts">
   import { ImagePlaceholder, Skeleton, TextPlaceholder, TestimonialPlaceholder } from 'flowbite-svelte';
-  import { YandexMetrikaHit } from '$lib/seo/yandex';
+  import { YandexMetrikaHit } from 'daks-svelte';
 
   export let title: string;
   export let description: string;
